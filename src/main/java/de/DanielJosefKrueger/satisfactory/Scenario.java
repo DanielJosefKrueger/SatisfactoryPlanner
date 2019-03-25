@@ -16,7 +16,7 @@ public class Scenario {
 
 
 
-    Scenario(){
+    public Scenario(){
 
         buildingMapping.put(new CableProducer(),0.0);
         buildingMapping.put(new CircuitBoardAssembly(),0.0);
@@ -54,6 +54,15 @@ public class Scenario {
         buildingMapping.put(new WireProducer(),0.0);
     }
 
+
+
+
+
+
+
+
+
+
     public void addNeed(ItemAmount need){
         boolean producreFound = false;
         for (Building building : buildingMapping.keySet()) {
@@ -83,16 +92,6 @@ public class Scenario {
 
 
 
-
-    public static void main(String[] args) {
-        Scenario scenario = new Scenario();
-        scenario.addNeed(new ItemAmount(Item.Computer, 1.875));
-        scenario.printStatistics();
-    }
-
-
-
-
     private void updateStatistics(){
         for (Map.Entry<Building, Double> entry : buildingMapping.entrySet()) {
             Building building = entry.getKey();
@@ -111,7 +110,7 @@ public class Scenario {
     }
 
 
-    private  void printStatistics(){
+    public void printStatistics(){
         updateStatistics();
         System.out.println("Buildings");
         System.out.println("Building and Amount");
