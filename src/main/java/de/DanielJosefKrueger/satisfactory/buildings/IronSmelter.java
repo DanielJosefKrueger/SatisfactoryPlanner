@@ -1,5 +1,8 @@
-package de.DanielJosefKrueger.satisfactory;
+package de.DanielJosefKrueger.satisfactory.buildings;
 
+
+import de.DanielJosefKrueger.satisfactory.Item;
+import de.DanielJosefKrueger.satisfactory.ItemAmount;
 
 public class IronSmelter extends Building{
 
@@ -7,7 +10,7 @@ public class IronSmelter extends Building{
     private static final ItemAmount EISENERZ = new ItemAmount(Item.IronOre, 30);
 
 
-    protected IronSmelter() {
+    public IronSmelter() {
         super(EISENBARREN, EISENERZ);
     }
 
